@@ -29,3 +29,8 @@ tbody
 	border-spacing: 0.5px solid;
 
 }
+
+th
+{
+	border: 1px solid black;
+}
