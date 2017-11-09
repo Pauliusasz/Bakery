@@ -2,10 +2,9 @@
 <html>
 <head>
 	<title>Bakery</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
 </head>
 <body>
-
-	<link rel="stylesheet" type="text/css" href="app.css">
 
 <table>
 	
@@ -106,6 +105,120 @@
 
 </table>
 
+<script type="text/javascript">
+
+//OPTION - I unsorted
+var _arrayOfObjects =
+[{
+	"date" : "2017-11-09",
+	"product" : "Aguoninė",
+	"data" : [5,20,19,4,2]
+},
+{
+	"date" : "2017-11-09",
+	"product" : "Varškės",
+	"data" : [1,25,17,0,7]
+}
+]
+
+//OPTION - II sort by date
+var _objectByDay =
+{
+	"2017-11-09" :
+	[
+		{
+			"product" : "Aguoninė",
+			"data" : [5,20,19,4,2]
+		},
+		{
+			"product" : "Varškės",
+			"data" : [1,25,17,0,7]
+		}
+
+	]
+}
+
+//OPTION - III sort by product
+
+var _objectByProduct =
+{
+
+	"Aguoninė" :
+	[
+		{
+			"date" : "2017-11-09",
+			"data" : [5,20,19,4,2]
+		}
+	]
+
+}
+
+console.log(_arrayOfObjects);
+console.log(_objectByDay);
+console.log(_objectByProduct)
+
+//OPTION - IV optimized by date
+
+// var _optimizedDate =
+// {
+// 	"2017-11-09" :		
+// 	{
+// 		"Aguoninė" : [5,20,19,4,2]
+// 		"Varškės" : [1,25,17,0,7]
+// 	}
+// }
+
+//OPTION - V optimized by product
+
+// var _optimizedByProduct =
+// {
+// 	"Aguoninė" :		
+// 	{
+// 		"2017-11-09" : [5,20,19,4,2]
+// 	}
+// }
+
+//OPTION FINAL
+
+// var _products =
+// {
+// 	"1": "Varškės"
+// }
+
+// var _FinalByProduct =
+// {
+// 	"1" :		
+// 	{
+// 		"2017-11-09" : [5,20,19,4,2]
+// 	}
+// }
+
+
+//OPTION DABASE
+var _products =
+{
+	"p-1" : "Varškės su cinamonu",
+}
+
+var _productsAmountKey =
+{
+	"VL" : "Likutis pradžiai",
+	"PG" : "Pagaminta",
+}
+
+var _products_history =
+[
+	{
+		"date" : "2017-11-09",
+		"product_id" : "p-1",
+		"key_id" : "VL",
+		"amount" : 3 
+	}
+]
+
+
+
+</script>
 
 </body>
 </html>
