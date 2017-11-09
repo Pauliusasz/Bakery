@@ -4,9 +4,12 @@
 	<title>Bakery</title>
 </head>
 <body>
+
+	<link rel="stylesheet" type="text/css" href="app.css">
+
 <table>
 	
-	<thead>
+	<thead .thead>
 		
 		<td>Pavadinimas</td>
 
