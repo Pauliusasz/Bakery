@@ -2,11 +2,11 @@
 <html>
 <head>
 	<title>Bakery</title>
-	<link rel="stylesheet" type="text/css" href="app.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
 </head>
 <body>
 
-<table>
+<table id="hand-made">
 	
 	<thead>
 		<tr>
@@ -104,5 +104,7 @@
 	</tbody>
 
 </table>
+
+<?php @include_once('app/app.php')?>
 </body>
 </html>

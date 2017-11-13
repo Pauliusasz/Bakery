@@ -34,3 +34,8 @@ th
 {
 	border: 1px solid black;
 }
+
+#hand-made
+{
+	display: none;
+}
