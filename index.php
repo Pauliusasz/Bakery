@@ -105,6 +105,6 @@
 
 </table>
 
-<?php @include_once('app/app.php')?>
+<?php @include_once('app/app.php');?>
 </body>
 </html>
