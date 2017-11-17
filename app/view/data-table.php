@@ -46,7 +46,7 @@ foreach ($data as $key => $value) {
 			<?php
 			foreach ($rows as $row) 
 			{
-				echo "<tr>\"$row\"</tr>";
+				echo "<tr>$row</tr>";
 			}
 			
 			?>
@@ -58,7 +58,7 @@ foreach ($data as $key => $value) {
 
 <?php
 
-var_dump($data);
+//var_dump($data);
 
 $html = '';
 

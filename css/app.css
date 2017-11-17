@@ -39,3 +39,8 @@ td, th
 {
 	display: none;
 }
+
+.new-class
+{
+	margin-bottom: 20px;
+}
