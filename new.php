@@ -13,8 +13,8 @@
 		
 		<div>Prekė :</div>
 		<select name = "product">
-			<option value = "1">Aguoninė</option>
-			<option value = "2">Varškės</option>
+			<option value = "P-1">Aguoninė</option>
+			<option value = "P-2">Varškės</option>
 		</select>
 
 		<div>Vakarykštis likutis :</div> <input type="number" name="vl"> <br>
