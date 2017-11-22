@@ -4,6 +4,21 @@ $new_data = ($_POST);
 
 //TODO
 //check if all parameters are provided
+$required_fields = ["Data","product","vl","pg","pr","sg","gl"];
+$validData = true;
+
+foreach ($required_fields as $value) 
+{
+	if (!isset($new_data[$value]) || empty($new_data[$value])) 
+	{
+		$validData = false;
+		echo "Nerastas parametras: $value <br>";
+
+	}
+}
+
+if (!$validData)
+	return;
 
 //reading data
 $existing_data = json_decode(file_get_contents('data/bakery-data.json'));

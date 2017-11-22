@@ -13,8 +13,19 @@
 		
 		<div>Prekė :</div>
 		<select name = "product">
-			<option value = "P-1">Aguoninė</option>
-			<option value = "P-2">Varškės</option>
+			<?php
+
+				$products = json_decode(file_get_contents('data/products.json'),true);
+				foreach ($products as $key => $value) 
+				{
+					
+					echo "<option value = \"$key\" >$value</option>";
+
+				}
+
+
+			?>
+
 		</select>
 
 		<div>Vakarykštis likutis :</div> <input type="number" name="vl"> <br>
