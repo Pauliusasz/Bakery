@@ -4,25 +4,39 @@ $days = $keys = '';
 $rows = [];
 $products_names = json_decode(file_get_contents('data/products.json'),true);
 
+print_r(ksort($data));
 
 foreach ($data as $key => $value) {
 					
 		$days .= "<th colspan=\"5\">$key</th>";
 		$keys .= "<th>VL</th> <th>PG</th> <th>PR</th> <th>SG</th> <th>GL</th>";
 
-		foreach ($value as $name => $data) 
+		foreach ($products_names as $key => $name) 
 		{
 
-			if(!isset($rows[$name]))	
+			if(!isset($rows[$key]))	
 				{
-					$rows[$name] = "<td>$products_names[$name]</td>";
+					$rows[$key] = "<td>$name</td>";
 				}
-			foreach ($data as $amount) 
+
+			if (isset($value[$key])) 
 			{
-				$rows[$name] .= ("<td>$amount</td>");
+				foreach ($value[$key] as $amount)
+				{
+
+					$rows[$key] .= "<td>$amount</td>";
+
+				}
+			}	
+			else
+			{
+				$rows[$key] .="<td></td> <td></td> <td></td> <td></td> <td></td>";
 			}
 
+
 		}
+
+
 	}
 ?>
 

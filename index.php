@@ -6,7 +6,7 @@
 </head>
 <body>
 
-	<a <link rel="stylesheet" type="text/css" href="new.php" class="new-class">Įvesti naujos dienos duomenis</a>
+	<a link rel="stylesheet" type="text/css" href="new.php" class="new-class">Įvesti naujos dienos duomenis</a>
 
 <?php @include_once('app/app.php')
 ?>
