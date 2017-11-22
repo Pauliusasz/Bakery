@@ -16,6 +16,7 @@ foreach ($required_fields as $value)
 
 	}
 }
+		echo "<a <link rel=\"stylesheet\" type=\"text/css\" href=\"new.php\" class=\"new-class\">Grįžti atgal</a>";
 
 if (!$validData)
 	return;

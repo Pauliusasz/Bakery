@@ -2,6 +2,8 @@
 
 $days = $keys = '';
 $rows = [];
+$products_names = json_decode(file_get_contents('data/products.json'),true);
+
 
 foreach ($data as $key => $value) {
 					
@@ -13,7 +15,7 @@ foreach ($data as $key => $value) {
 
 			if(!isset($rows[$name]))	
 				{
-					$rows[$name] = "<td>$name</td>";
+					$rows[$name] = "<td>$products_names[$name]</td>";
 				}
 			foreach ($data as $amount) 
 			{
