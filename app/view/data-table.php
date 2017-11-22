@@ -4,7 +4,7 @@ $days = $keys = '';
 $rows = [];
 $products_names = json_decode(file_get_contents('data/products.json'),true);
 
-print_r(ksort($data));
+ksort($data);
 
 foreach ($data as $key => $value) {
 					
