@@ -14,6 +14,8 @@ function db_connect ()
 		die("Could nor connect");
 	}
 
+	$conn ->set_charset('utf8mb4');
+
 	return $conn;
 }
 
@@ -27,12 +29,6 @@ function db_query(string $query)
 	return $result;
 }
 
-$query = "SELECT * FROM `bakery_products`";
-$result = db_query($query);
-foreach ($result as $key =>$value) 
-{
-	print_r ($value);
-}
 // print_r(db_query($query));
 
 /*
