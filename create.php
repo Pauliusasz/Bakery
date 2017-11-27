@@ -4,7 +4,7 @@ $new_data = ($_POST);
 
 //TODO
 //check if all parameters are provided
-$required_fields = ["Data","product","vl","pg","pr","sg","gl"];
+$required_fields = ["date","product_id","vl","pg","pr","sg","gl"];
 $validData = true;
 
 foreach ($required_fields as $value) 
@@ -50,10 +50,10 @@ function objectToArray(stdClass $obj) : array
 function updateData(&$existing_data,$new_data)
 {
 
-	if (isset($existing_data[$new_data['Data']])) 
+	if (isset($existing_data[$new_data['date']])) 
 	{
 
-		if (isset($existing_data[$new_data['Data']][$new_data['product']]))
+		if (isset($existing_data[$new_data['date']][$new_data['product_id']]))
 		{
 			echo 'ERROR';
 		}
@@ -65,7 +65,7 @@ function updateData(&$existing_data,$new_data)
 	}
 	else
 	{
-		$existing_data[$new_data['Data']] = [];
+		$existing_data[$new_data['date']] = [];
 		$existing_data = createNewProduct($existing_data,$new_data);
 	}
 
@@ -74,7 +74,7 @@ function updateData(&$existing_data,$new_data)
 
 function createNewProduct ($existing_data,$new_data)
 {
-	$existing_data[$new_data['Data']][$new_data['product']] = 
+	$existing_data[$new_data['date']][$new_data['product_id']] = 
 	[
 		(int)$new_data["vl"],
 		(int)$new_data["pg"],
