@@ -32,8 +32,8 @@
 
 		<div>Vakarykštis likutis :</div> <input type="number" name="initial"> <br>
 		<div>Pagaminta           :</div> <input type="number" name="produced"> <br>
-		<div>Parduota            :</div> <input type="number" name="damaged"> <br>
-		<div>Sugadinta           :</div> <input type="number" name="sold"> <br>
+		<div>Parduota            :</div> <input type="number" name="sold"> <br>
+		<div>Sugadinta           :</div> <input type="number" name="damaged"> <br>
 		<div>Galutinis likutis   :</div> <input type="number" name="closed"> <br>
 
 		<input type="Submit" value="Išsaugoti duomenis">
