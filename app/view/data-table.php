@@ -3,22 +3,29 @@
 $days = $rows = [];
 $keys = '';
 
-ksort($data);
-
+foreach ($products as $value) 
+{
+	if (!isset($rows[$value['id']])) 
+	{
+		$rows[$value['id']] = '<td>'. $value['name']. '</td>';
+	}
+}
 foreach ($productsHistory as $value) 
 {
 		if (!isset($days[$value['date']])) {	
 
 		$days[$value['date']] .= $value['date'];
-		$keys .= "<th>VL</th> <th>PG</th> <th>PR</th> <th>SG</th> <th>GL</th>";}
+		$keys .= "<th>VL</th> <th>PG</th> <th>PR</th> <th>SG</th> <th>GL</th>";
+		}
+			
+			// if(!isset($rows[$value['product_id']]))	
+			// 	{
+			// 		$rows[$value['product_id']] = '<td>'.$value['product_id'].'</td>';
+			// 	}
 
 /*		foreach ($products_names as $key => $name) 
 		{
 
-			if(!isset($rows[$key]))	
-				{
-					$rows[$key] = "<td>$name</td>";
-				}
 
 			if (isset($value[$key])) 
 			{
@@ -70,7 +77,7 @@ foreach ($productsHistory as $value)
 			<?php
 			foreach ($rows as $row) 
 			{
-				echo "<tr>$row</tr>";
+				echo '<tr>'.$row.'</tr>';
 			}
 			
 			?>
