@@ -9,7 +9,7 @@ $validData = true;
 
 foreach ($required_fields as $value) 
 {
-	if (!isset($new_data[$value]) || empty($new_data[$value])) 
+	if (!isset($new_data[$value]) || empty($new_data[$value]))
 	{
 		$validData = false;
 		echo "Nerastas parametras: $value <br>";
