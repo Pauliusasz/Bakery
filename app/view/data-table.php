@@ -12,8 +12,6 @@ foreach ($products as $value)
 	}
 }
 
-// print_r($rows);
-// die();
 foreach ($productsHistory as $value) 
 {
 		if (!isset($days[$value['date']])) 
@@ -27,14 +25,11 @@ foreach ($productsHistory as $value)
 				$product[$value['date']] = "<td></td> <td></td> <td></td> <td></td> <td></td>";
 			}
 		}
-/*		$rows[$value['product_id']] .= '<td>'. $value['initial'] .'</td>';
-		$rows[$value['product_id']] .= '<td>'. $value['produced'] .'</td>';
-		$rows[$value['product_id']] .= '<td>'. $value['sold'] .'</td>';
-		$rows[$value['product_id']] .= '<td>'. $value['damaged'] .'</td>';
-		$rows[$value['product_id']] .= '<td>'. $value['closed'] .'</td>';
-*/
 
+
+		$rows[$value['product_id']][$value['date']] = '<td>'. $value['initial'] .'</td>'.'<td>'. $value['produced'] .'</td>'.'<td>'. $value['sold'] .'</td>'.'<td>'. $value['damaged'] .'</td>'.'<td>'. $value['closed'] .'</td>';
 }
+
 ?>
 
 
@@ -84,8 +79,6 @@ foreach ($productsHistory as $value)
 
 
 <?php
-
-//var_dump($data);
 
 $html = '';
 
