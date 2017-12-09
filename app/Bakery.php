@@ -20,6 +20,10 @@ class Bakery
                 case ('product');
                     if ($action == 'new')
                         $this -> show((new ProductController())->create());
+                    elseif ($action=='list')
+                        (new ProductController())->list();
+
+
                     break;
             }
 
@@ -36,7 +40,6 @@ class Bakery
             }
         }
 
-        echo 'Bakery online';
     }
 
     private function show (string $text)
