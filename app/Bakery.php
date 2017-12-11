@@ -4,6 +4,7 @@ namespace app;
 
 
 use app\controller\ProductController;
+use app\controller\ProductHistoryController;
 
 class Bakery
 {
@@ -19,12 +20,22 @@ class Bakery
             {
                 case ('product');
                     if ($action == 'new')
-                        $this -> show((new ProductController())->create());
+                        (new ProductController())->create();
                     elseif ($action=='list')
                         (new ProductController())->list();
 
 
                     break;
+
+                case ('product_history');
+                    if ($action == 'new')
+                        $this -> show((new ProductHistoryController())->create());
+                    elseif ($action=='list')
+                        (new ProductHistoryController())->list();
+
+
+                    break;
+
             }
 
         }
@@ -36,6 +47,10 @@ class Bakery
                 case ('product');
                     if ($action == 'create')
                         $this->show((new ProductController())->store());
+                    break;
+                case ('product_history');
+                    if ($action == 'create')
+                        $this->show((new ProductHistoryController())->store());
                     break;
             }
         }

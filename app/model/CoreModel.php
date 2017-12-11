@@ -50,7 +50,7 @@ class CoreModel
         die();
     }
 
-    protected function generateInsertQuery ($data, bool $uuid = false) : string
+     function generateInsertQuery ($data, bool $uuid = false) : string
     {
 
         if ($uuid)

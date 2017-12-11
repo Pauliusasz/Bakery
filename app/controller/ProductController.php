@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Paulius
- * Date: 2017.12.06
- * Time: 19:51
- */
 
 namespace app\controller;
-
 
 use app\model\Product;
 
@@ -15,7 +8,9 @@ class ProductController
 {
     public function create()
     {
-        return file_get_contents('app\view\product\new.php');
+
+        (new TemplateEngineController('new-product'))->echoOutput();
+
     }
     public function store() : string
     {
@@ -54,16 +49,12 @@ class ProductController
             }
             $data .= '</tr>';
        }
-        echo "<table>";
-        echo "<thead>";
-        echo "<tr>";
-        echo ($header);
-        echo "</tr>";
-        echo "</thead>";
-        echo "<tbody>";
-        echo ($data);
-        echo "</tbody>";
-        echo "</table>";
+
+       $template = new TemplateEngineController('table-list');
+       $template->set('header',$header);
+       $template->set('data',$data);
+
+       $template->echoOutput();
     }
 
 }
