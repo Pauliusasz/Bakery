@@ -11,12 +11,9 @@ class ProductHistory extends CoreModel implements Manageable, Destroyable
     protected $table = 'bakery_products_history';
     public function create(array $data)
     {
-        print_r($data);
+        $query=$this->generateInsertQuery( $data,true);
+        $this->query($query);
 
-        $this->generateInsertQuery('Bakery_products',$data,true);
-        $query =$this->generateInsertQuery('Bakery_products',$data,true);
-
-        print_r($this->query($query));
     }
 
     public function destroy()

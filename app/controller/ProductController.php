@@ -8,23 +8,18 @@ class ProductController
 {
     public function create()
     {
-
         (new TemplateEngineController('new-product'))->echoOutput();
 
     }
-    public function store() : string
+    public function store()
     {
-        //(new Product())->create($_POST);
-
-        //Product::create($_POST);
-
         $model = new Product();
         $model->create($_POST);
 
         //Redirecting to LIST
         header ('Location: ?view=product&action=list');
 
-        return '';
+        exit();
     }
 
     public function list()
